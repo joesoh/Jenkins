@@ -1,25 +1,7 @@
-# Jenkins
-This Repo outline the procedure in upgrading Jenkins
+# Chart Source
+https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/README.md
+https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
 
-Obtain Jenkins war file from 
-https://updates.jenkins-ci.org/download/war/
-
-Command wget https://updates.jenkins-ci.org/download/war/2.150.3/jenkins.war
-
-Confirm locatio of running Jenkins
-ps -eaf | grep java
-
- 
-Remove symlink
-rm jenkins.war
- 
-Create symlink and link it to new war file
-ln -s jenkins-2.150.3.war jenkins.war
- 
-Restart Jenkins
-
-systemctl restart jenkins
- 
-Check Log
-tail -f /var/log/jenkins/jenkins.log
-
+## Installation command
+helm install [RELEASE_NAME] jenkins/jenkins
+helm install jenkins -f values.yaml jenkins/jenkins
