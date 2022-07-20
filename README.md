@@ -1,8 +1,10 @@
 # Chart Source
-https://github.com/jenkinsci/helm-charts/blob/main/charts/jenkins/README.md
-https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
+https://bitnami.com/stack/jenkins/helm
 
 ## Installation command
-helm install [RELEASE_NAME] jenkins/jenkins
-helm install jenkins -f values.yaml jenkins/jenkins
+helm install [RELEASE_NAME] bitnami/jenkins
+helm install jenkins -f values.yaml bitnami/jenkins
 
+## Minikube
+minikube addons enable ingress
+minikube tunnel

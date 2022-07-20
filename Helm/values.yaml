@@ -1,18 +1,10 @@
-controller:
-  # Default tag: "2.346.2-jdk11"
-  tag: lts-jdk11
-  installPlugins:
-    - command-launcher:84.v4a_97f2027398
-    - kubernetes:3670.v6ca_059233222
-    - workflow-aggregator:590.v6a_d052e5a_a_b_5
-    - git:4.11.3
-    - configuration-as-code:1511.vb_f985b_894e40
-    - jdk-tool:1.5
+image:
+  registry: docker.io
+  repository: bitnami/jenkins
+  tag: 2.332.3-debian-11-r3
 
-  ingress:
-    enable: true
-    hostName: jenkins.abc.com
-    tls:
-      - secretName: tls-jenkins
-        hosts:
-          - jenkins.abc.com
+ingress:
+  enabled: true
+  hostname: jenkins.local
+  tls: true
+  selfSigned: true
