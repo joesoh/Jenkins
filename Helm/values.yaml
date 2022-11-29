@@ -5,6 +5,9 @@ image:
 
 ingress:
   enabled: true
-  hostname: jenkins.local
+  ingressClassName: nginx
+  hostname: jenkins.halocheck.xyz
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   tls: true
-  selfSigned: true
+  #selfSigned: true
